@@ -1,11 +1,13 @@
 import "./App.css";
+import LikedButton from "./LikedButton";
 import ProductCard from "./ProductCard";
 
 const products = [
   {
     id: 1,
     title: "Wireless Headphones",
-    description: "Comfortable headphones with clear sound and long battery life.",
+    description:
+      "Comfortable headphones with clear sound and long battery life.",
     oldPrice: 8500,
     newPrice: 6999,
   },
@@ -34,11 +36,17 @@ const products = [
 
 function App() {
   return (
-    <main className="product-grid">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </main>
+    <>
+      <>
+        <LikedButton />
+      </>
+
+      <main className="product-grid">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </main>
+    </>
   );
 }
 
