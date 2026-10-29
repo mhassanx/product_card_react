@@ -6,12 +6,14 @@ export default function LikedButton() {
   let toggle = () => {
     setClickMe(!clickMe);
   };
+
+  let styles = { color: "red" };
   return (
     <>
       <h3>toggle it</h3>
 
       <i onClick={toggle}>
-        {!clickMe ? <h6>Unclick Me</h6> : <h6>Click me</h6>}
+        {!clickMe ? <h4 style={styles}>Click me</h4> : <h4>UnClick me</h4>}
       </i>
     </>
   );
